@@ -1,0 +1,6 @@
+Advantages of EDA
+Data Understanding: Helps understand the dataset’s structure, types, and distributions, which is crucial for preparing the data for further analysis.
+Anomaly Detection: Identifies outliers, errors, and inconsistencies in the dataset that could affect the analysis or predictive models.
+Feature Identification: Helps identify which features are important for prediction and which ones can be dropped or combined to create more meaningful features.
+Insight Generation: Provides insights into patterns, correlations, and trends that can be useful for hypothesis generation or modeling.
+Visualization: The use of visual tools like histograms, scatter plots, and heatmaps aids in easily understanding the relationships between features.
