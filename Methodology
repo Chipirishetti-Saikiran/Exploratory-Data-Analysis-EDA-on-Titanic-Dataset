@@ -1,0 +1,37 @@
+Methodology
+1. Data Loading and Initial Exploration
+Objective: Load the dataset into a Pandas DataFrame and explore its basic structure.
+Steps:
+Load the dataset using pandas.read_csv().
+Inspect the data structure using df.info() and df.describe().
+Check for missing values and data types with df.isnull().sum().
+2. Univariate Analysis
+Objective: Analyze each individual feature to understand its distribution.
+Steps:
+Categorical Features (Sex, Embarked, Pclass): Used bar plots to understand the distribution and proportions within categories.
+Numerical Features (Age, Fare): Visualized the distribution using histograms and box plots to detect outliers, skewness, and general trends.
+3. Bivariate Analysis
+Objective: Investigate relationships between two variables, particularly survival rate.
+Steps:
+Survival by Gender and Class: Used bar plots to observe the survival rate across gender and passenger class.
+Survival by Age and Fare: Scatter plots were used to analyze survival trends based on age and fare.
+4. Missing Data Handling
+Objective: Address any missing data to avoid bias.
+Steps:
+Missing values were identified and imputed for features such as Age and Fare using mean/median imputation.
+Features with a high percentage of missing values, such as Cabin, were dropped.
+5. Feature Engineering
+Objective: Generate new features to enhance model performance.
+Steps:
+Created a new feature Title extracted from the Name column (e.g., Mr., Mrs., Miss).
+Created Family Size by combining the SibSp and Parch columns.
+Categorized Age into age groups (e.g., Child, Adult, Senior).
+6. Outliers Detection
+Objective: Detect and handle outliers to ensure accurate analysis.
+Steps:
+Identified outliers in numerical features like Fare using box plots and decided whether to keep or handle them.
+7. Visualization
+Objective: Use visualizations to summarize the findings.
+Steps:
+Used bar plots, histograms, and scatter plots to visualize the relationship between survival and various features.
+Created a correlation heatmap to visualize relationships between numerical variables.
