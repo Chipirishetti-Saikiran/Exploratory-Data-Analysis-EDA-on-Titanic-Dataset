@@ -1,0 +1,5 @@
+Disadvantages of EDA
+Time-Consuming: EDA can be an iterative and time-consuming process, especially for large datasets.
+Subjective Interpretation: The insights drawn from EDA may vary based on the interpretation of visualizations and the methods used for analysis.
+Limited Predictive Power: EDA provides insights into the data but does not directly generate predictive models or results.
+Missing Insights: If certain features or relationships are overlooked during EDA, important insights may be missed.
