@@ -1,0 +1,12 @@
+Frameworks and Tools Used
+1. Pandas
+Purpose: Data manipulation and analysis (loading, cleaning, summarizing).
+Key Functions: read_csv(), info(), describe(), isnull(), groupby().
+2. Matplotlib and Seaborn
+Purpose: Data visualization.
+Key Functions: plt.hist(), sns.barplot(), sns.boxplot(), sns.heatmap().
+3. NumPy
+Purpose: Numerical operations for handling missing data, outliers, and mathematical transformations.
+Key Functions: np.nan, np.mean(), np.median(), np.corrcoef().
+4. Jupyter Notebooks
+Purpose: Interactive development environment for running and documenting EDA analysis.
