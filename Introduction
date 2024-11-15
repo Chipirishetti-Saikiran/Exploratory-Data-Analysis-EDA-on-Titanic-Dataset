@@ -1,0 +1,7 @@
+Introduction
+The Titanic dataset has been widely used in the data science community for practicing machine learning algorithms. The dataset includes various features such as passenger class, age, sex, survival status, fare paid, and more. By performing EDA on this dataset, we aim to:
+
+Understand the distribution of features.
+Identify relationships between features.
+Discover any hidden patterns or trends that may help in predicting the survival rate.
+Explore missing data and handle outliers.
