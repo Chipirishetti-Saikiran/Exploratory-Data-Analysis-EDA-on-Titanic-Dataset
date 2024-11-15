@@ -1,0 +1,17 @@
+Results
+Key Insights:
+Survival Rates:
+
+Gender: Females had a higher survival rate compared to males.
+Class: Passengers in first class had a higher survival rate than those in second and third class.
+Age: Children had a higher survival rate, whereas older adults had lower survival chances.
+Missing Data:
+
+The Cabin feature had many missing values, leading to its exclusion from analysis.
+Age and Fare had some missing values, which were imputed with the mean or median.
+Outliers:
+
+The Fare feature had a few extreme values, identified using box plots. However, these values were not removed as they might represent genuine data points (e.g., first-class tickets).
+Feature Engineering:
+
+Creating new features like Title and Family Size could enhance the predictive power of models in the next stages of the project.
