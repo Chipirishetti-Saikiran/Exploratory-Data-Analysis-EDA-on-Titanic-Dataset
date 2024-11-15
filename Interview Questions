@@ -1,0 +1,67 @@
+1. What was your approach to performing Exploratory Data Analysis (EDA) on the Titanic dataset?
+Answer: My approach to EDA on the Titanic dataset involved the following steps:
+
+Data Loading: I started by loading the dataset into a Pandas DataFrame and performed an initial exploration using df.info() to understand the data types and check for missing values.
+Univariate Analysis: I analyzed individual variables to check their distributions. For categorical features like Pclass, Sex, and Embarked, I used bar plots to see the proportions. For numerical features like Age and Fare, I used histograms and box plots to check the distribution and outliers.
+Bivariate Analysis: I analyzed the relationship between survival (target variable) and other features using bar plots for categorical features like Pclass and Sex, and scatter plots for numerical features like Age and Fare.
+Missing Data Handling: I checked for missing values using df.isnull().sum(). Columns like Age and Fare had missing data, which I imputed with the median. The Cabin column had many missing values and was dropped.
+Feature Engineering: I created new features like Title (derived from the Name column), and Family Size (combining SibSp and Parch).
+Outlier Detection: I identified outliers using box plots, especially in the Fare column, and decided whether to retain or handle them.
+Data Visualization: I used visualizations like bar plots, histograms, and heatmaps to understand correlations and feature distributions.
+2. What insights did you uncover from the Titanic dataset during your EDA?
+Answer: Some key insights from the EDA are:
+
+Survival by Gender: The survival rate for females was significantly higher than that for males. Females had a survival rate of around 74%, while males had a survival rate of about 19%.
+Survival by Class: First-class passengers had the highest survival rate (about 62%), followed by second-class (about 47%) and third-class passengers (about 24%).
+Survival by Age: Children (under 12) had a higher survival rate compared to adults. The survival rate of older passengers was lower, especially those above 60 years of age.
+Missing Data: The Cabin feature had a significant amount of missing data (around 77%), so it was dropped. The Age feature had missing values, which were imputed using the median.
+Fare Outliers: There were outliers in the Fare feature, with some passengers paying very high fares. These extreme values did not seem to be errors but could be genuine (e.g., luxury class tickets).
+3. How did you handle missing data in the Titanic dataset?
+Answer: I handled missing data as follows:
+
+Age: Since Age had missing values, I imputed the missing values with the median of the Age column because the median is less affected by outliers than the mean.
+Fare: For the Fare feature, I also used the median to impute missing values.
+Embarked: The Embarked feature had a small number of missing values (about 2), and I imputed it with the most frequent category (mode), which was C.
+Cabin: The Cabin feature had a large number of missing values (77%), and since it wasn’t critical for my analysis (due to its sparsity), I decided to drop the column.
+4. What strategies did you use for detecting and handling outliers in the Titanic dataset?
+Answer: For detecting outliers, I used box plots and histograms:
+
+Fare: The Fare feature had extreme values (outliers), as expected because some passengers paid very high fares for first-class tickets. I visualized this using a box plot. While the outliers were significant, I chose not to remove them, as they might reflect real luxury ticket purchases.
+Age: The Age feature had no significant outliers, as the data appeared to follow a normal distribution.
+SibSp/Parch: These features had no major outliers, but I checked for extreme values using histograms.
+If needed, outliers could have been removed, transformed, or capped, depending on the situation. For instance, extreme fares could be capped at a certain threshold if they were considered erroneous.
+
+5. How did you handle categorical features like 'Sex', 'Pclass', and 'Embarked' during your analysis?
+Answer: For categorical features like Sex, Pclass, and Embarked:
+
+Sex: I visualized the Sex feature using a bar plot to analyze the survival rate for males vs. females. I didn't need to encode this feature for EDA, but for model building, I would use one-hot encoding or label encoding.
+Pclass: I used bar plots to show the survival rates across different classes. Pclass is already a numerical feature, but it represents categories, so it was treated as a categorical feature for analysis.
+Embarked: I visualized the distribution of passengers who embarked at C, Q, and S using bar plots. I noticed the majority of passengers embarked at S. For missing values, I imputed the missing values with the most frequent category, C.
+For further analysis or machine learning, these categorical variables would be encoded (e.g., one-hot encoding for Embarked and Sex).
+
+6. What features did you engineer, and why?
+Answer: I engineered the following features to enhance the dataset:
+
+Title: I extracted the Title (e.g., Mr., Mrs., Miss) from the Name column. Titles can provide useful information about social status, which might influence survival.
+Family Size: I created a new feature Family Size by combining the SibSp (siblings/spouses) and Parch (parents/children) columns. A larger family size could correlate with lower survival chances, as larger groups might have been separated during evacuation.
+Age Group: I created categorical age groups (e.g., child, adult, senior) to better understand the survival rates across different age ranges.
+These features could potentially improve the performance of machine learning models by providing more meaningful representations of the data.
+
+7. What visualizations did you create during your EDA process, and how did they help you understand the data?
+Answer: I created several visualizations to explore the data:
+
+Bar Plots: Used to visualize the distribution of categorical features such as Sex, Pclass, and Embarked, and to compare survival rates across these features.
+Histograms: Used to visualize the distribution of numerical features like Age and Fare, helping to identify the shape of the data and potential outliers.
+Box Plots: Used to detect outliers in Fare and understand the spread of data in numerical features.
+Heatmap: A correlation heatmap was created to identify relationships between numerical features like Age, Fare, SibSp, and Parch.
+Count Plots: Used to visualize the frequency of passengers in each category of Pclass and Embarked.
+These visualizations allowed me to uncover trends, detect anomalies, and understand the relationships between different features, which guided my subsequent steps in analysis.
+
+8. What challenges did you face during your Titanic EDA, and how did you overcome them?
+Answer: Some challenges I encountered during EDA on the Titanic dataset include:
+
+Missing Data: The Cabin feature had a significant amount of missing data. Dropping it was a straightforward solution, but it could have contained valuable information. In hindsight, exploring imputation or feature extraction from the Cabin data might have been useful.
+Imbalanced Data: The target variable, Survived, was imbalanced, with more passengers who did not survive. I addressed this by focusing on other features to explore potential correlations with survival. In a real-world scenario, techniques like resampling or using performance metrics such as F1-score would be useful.
+Feature Correlation: Identifying which features correlated strongly with Survived required careful visualization and understanding. Pclass, Sex, and Age were key features, but some additional feature engineering might have helped in improving the analysis.
+Despite these challenges, by systematically analyzing the dataset and visualizing patterns, I was able to extract meaningful insights.
+
